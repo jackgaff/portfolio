@@ -1,0 +1,365 @@
+/* Define some variables for colors and fonts */
+:root {
+    --light-color: #f0f0f0;
+    --dark-color: #202020;
+    --accent-color: #00a0ff;
+    --font-family: Arial, sans-serif;
+}
+
+/* Use the light theme by default */
+body {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+
+/* Use the dark theme when the body has the dark-theme class */
+body.dark-theme {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+/* Style the header section */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Style the h1 element with your name */
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Style the toggle container */
+.toggle-container {
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+/* Style the toggle input */
+.toggle-container input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Style the toggle label */
+.toggle-container label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+}
+
+/* Style the toggle label before pseudo-element */
+.toggle-container label:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+/* Move the toggle label before pseudo-element to the right when the input is checked */
+.toggle-container input:checked + label:before {
+    transform: translateX(26px);
+}
+
+/* Change the toggle label background color to the accent color when the input is checked */
+.toggle-container input:checked + label {
+    background-color: var(--accent-color);
+}
+
+/* Style the main section */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the introduction section */
+#introduction {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* Style the profile picture */
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Style the introduction text */
+.intro-text {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Style the h2 elements with section titles */
+h2 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+}
+
+/* Style the skill list */
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style the skill list items */
+.skill-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Style the skill name */
+.skill-name {
+    width: 100px;
+    font-weight: bold;
+}
+
+/* Style the progress container */
+.progress-container {
+    width: 300px;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Style the progress bar */
+.progress-bar {
+    height: 100%;
+    background-color: var(--accent-color);
+}
+
+/* Style the project grid */
+/* Style the project grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Style the project card */
+.project-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Style the project description */
+.project-desc {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Style the project link */
+.project-link {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Style the contact section */
+#contact {
+    margin-bottom: 40px;
+}
+
+/* Style the contact text */
+.contact-text {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Style the contact form */
+.contact-form {
+    max-width: 600px;
+}
+
+/* Style the form group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+/* Style the form label */
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style the form input and textarea */
+.form-group input, .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style the textarea */
+.form-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Style the submit button */
+.submit-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style the footer section */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #eee;
+}
+
+/* Style the footer text */
+.footer-text {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Style the social list */
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+/* Style the social list items */
+.social-list li {
+    margin-left: 10px;
+}
+
+/* Style the social link */
+.social-link {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-9999px, -9999px);
+    z-index: -1;
+}
+
+.skip-link:focus {
+    position: fixed;
+    left: 50%;
+    top: 10px;
+    transform: translate(-50%, 0);
+    z-index: 999;
+    background-color: #00a0ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+/* Style the about section */
+#about {
+    margin-bottom: 40px;
+}
+
+/* Style the about section headings */
+#about h2 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+}
+
+/* Style the about section paragraphs */
+#about p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+}
+
+/* Style the about link */
+.about-link {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+/* Style the index link */
+.index-link {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Style the sun icon */
+.sun-icon {
+    position: absolute;
+    left: -30px;
+    top: 2px;
+    font-size: 24px;
+}
+
+/* Style the moon icon */
+.moon-icon {
+    position: absolute;
+    right: -30px;
+    top: 2px;
+    font-size: 24px;
+}
+
+/* Hide the sun icon when the input is checked */
+.toggle-container input:checked ~ .sun-icon {
+    display: none;
+}
+
+/* Hide the moon icon when the input is not checked */
+.toggle-container input:not(:checked) ~ .moon-icon {
+    display: none;
+}
